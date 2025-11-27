@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 
-import Grid from '@mui/material/Grid';
+import { Flex } from '@chakra-ui/react';
 
 import AppSettingsProvider from './context/appsettings';
 import PubSubProvider from './context/pubsub';
@@ -12,15 +12,15 @@ function App() {
     <PubSubProvider>
       <PlayerProvider>
         <AppSettingsProvider>
-          <Grid
-            alignItems="center"
-            container
+          <Flex
+            align="center"
             direction="row"
             id="routes"
-            justifyContent="center"
+            justify="center"
+            w="100%"
           >
             <Router />
-          </Grid>
+          </Flex>
         </AppSettingsProvider>
       </PlayerProvider>
     </PubSubProvider>

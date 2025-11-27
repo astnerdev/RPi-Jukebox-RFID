@@ -7,17 +7,17 @@ import Navigation from './components/Navigation';
 import Player from './components/Player'
 import Settings from './components/Settings'
 
-import Grid from '@mui/material/Grid';
+import { Box } from '@chakra-ui/react';
 
 const Router = () => {
   return (
     <HashRouter>
-      <Grid
-        item xs={12}
-        md={6}
-        sx={{
-          marginBottom: '64px',
-        }}
+      <Box
+        w="100%"
+        maxW="1200px"
+        mx="auto"
+        mb="64px"
+        px={{ base: 4, md: 6 }}
       >
         <Routes>
           <Route
@@ -39,7 +39,7 @@ const Router = () => {
             exact
           />
         </Routes>
-      </Grid>
+      </Box>
       <Navigation />
     </HashRouter>
   );
